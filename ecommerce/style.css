@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+
+/* global conf color */
+
+:root {
+    --main-color: rgb(245, 4, 4);
+    --text-color: #fff;
+    --bg-color: #020307;
+}
+
+body {
+    /* background-color: var(--bg-color);
+    color: var(--text-color); */
+}
+
+header {
+    /* position: fixed; */
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 70px;
+    transition: 0.5s;
+    background-color: #020307;
+}
+
+.logo {
+    /* font-size: 1.1rem; */
+    font-weight: 500;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.logo i {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.logo span {
+    background-color: orange;
+    border-radius: 5px;
+    color: var(--bg-color);
+    margin-right: 40px;
+    margin-left: 3px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    margin-right: 25px;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar li a {
+    color: #fff;
+}
+
+.navbar a::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after,
+.navbar .active::after {
+    width: 100%;
+}
+
+.btn {
+    font-size: 12px;
+    color: var(--text-color);
+    font-weight: 400;
+    border-radius: 0.5rem;
+}
+
+
+/* Home Cover Section */
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 100px 100px;
+}
+
+.container img {
+    position: absolute;
+    z-index: -1;
+    padding: 20px 30%;
+    /* width: 100%;
+    height: 100%; */
+    /* object-fit: cover; */
+    object-position: center;
+    opacity: 0.7;
+}
+
+.home-text {
+    padding-left: 150px;
+}
+
+.home-text .play {
+    position: absolute;
+    right: 2rem;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.home-text .play .bx {
+    font-size: 2rem;
+    color: var(--text-color);
+    background-color: var(--main-color);
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid rgb(2, 3, 7, 0.4);
+}
+
+.home-text .play:hover {
+    transform: scale(1.1);
+    filter: brightness(1.3);
+}
+
+
+/* movies section */
+
+.heading {
+    max-width: 968px;
+    margin: 10px auto 10px auto;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.movie-container {
+    max-width: 960px;
+    margin: 0px auto 0px auto;
+    display: grid;
+    /* grid-template-columns: auto auto auto auto; */
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.box .box-img {
+    width: 100%;
+    height: 270px;
+}
+
+.box .box-img h3 {
+    margin-top: 2rem;
+}
+
+.box .box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    filter: brightness(0.8);
+}
+
+.box .box-img img:hover {
+    transform: translateY(-10px);
+    filter: brightness(1);
+}
